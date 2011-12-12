@@ -1,0 +1,15 @@
+.inactive {
+	pointer-events:	none;
+	cursor: default;
+} 
+.active {
+	pointer-events: auto;
+	cursor: pointer;
+}
+.fullTweet {
+	border-bottom: 1px solid #EBEBEB
+}
+/* :hover is a pseudo selector to use to set the mouseover attributes */
+ .fullTweet:hover {
+   background-color: #66FFFF;
+}
