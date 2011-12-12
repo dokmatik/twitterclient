@@ -55,6 +55,8 @@ TwitterResult = function(data) {
 		$(this).html(urlify(origText));
 	});
 	$("#resultsOrder").focus();//.fadeIn(2000);
+	
+	// #nextTweets and #previousTweets
 	$("#nextTweets").unbind();
 	if(data.next_page) {
 		$("#nextTweets").click({nextPage : data.next_page}, nextHandler);		
@@ -62,6 +64,7 @@ TwitterResult = function(data) {
 		$("#nextTweets").click(function() {return false;});		
 	}
 	$("#nextTweets").toggleClass("active", data.next_page != null);
+	$("#nextTweets").attr("title", data.next_page != null ? "Click to see next tweets" : "");
 	$("#previousTweets").unbind();	
 	if (data.previous_page) {
 		$("#previousTweets").click({nextPage : data.previous_page}, nextHandler);		
@@ -69,6 +72,8 @@ TwitterResult = function(data) {
 		$("#previousTweets").click(function() {return false;});		
 	}
 	$("#previousTweets").toggleClass("active", data.previous_page != null);
+	$("#previousTweets").attr("title", data.previous_page != null ? "Click to see previous tweets" : "");
+	
 	$(".fullTweet:eq(0)").show("slow", function() {
 	$(this).next(".fullTweet").fadeIn("50",arguments.callee)
 	});
@@ -131,8 +136,8 @@ $(document).ready(function() {
    <span class="ui-button-text">Tweets</span>
 </button> 
 <div id="results">
-<a id="previousTweets" class="inactive" href="#">Previous tweets</a>
-<a id="nextTweets" class="inactive" href="#">Next tweets</a>
+<a id="previousTweets" class="inactive" href="#" title="No tweets yet">Previous tweets</a>
+<a id="nextTweets" class="inactive" href="#" title="No tweets yet">Next tweets</a>
 <ol id="resultsOrder"></ol></div>
 		<!-- 
 	<div id="tweet1">
