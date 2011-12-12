@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Insert title here</title>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.js"></script>
+<script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.js"></script>
+<link type="text/css" href="jQuery/css/ui-lightness/jquery-ui-1.8.8.custom.css" rel="stylesheet" />	
+<link type="text/css" media="screen" href="css/twitter.css" rel="stylesheet"/>
+<script id="tweetTemplate" type="text/x-jquery-tmpl">
+	<li class="fullTweet" style="display:none">
+		<h3>
+			<img src="${profile_image_url}" alt="" />
+			<span class="tweetUser"><a href="http://www.twitter.com/${from_user}" target="new">${from_user}</a> tweeted on ${created_at}</span>
+		</h3>
+		<span class="tweedText ui-widget">${text}</span>
+	</li>
+</script>
+<script type="text/javascript">
+function parseUrl2(data) {
+    var e=/((http|ftp):\/)?\/?([^:\/\s]+)((\/\w+)*\/)([\w\-\.]+\.[^#?\s]+)(#[\w\-]+)?/;
+    if (data.match(e)) {
+        return  {url: RegExp['$&'],
+                protocol: RegExp.$2,
+                host:RegExp.$3,
+                path:RegExp.$4,
+                file:RegExp.$6,
+                hash:RegExp.$7};
+    }
+    else {
+        return  {url:"", protocol:"",host:"",path:"",file:"",hash:""};
+    }
+}
+	
+function urlify(text) {
+    var urlRegex = /(https?:\/\/[^\s]+)/g;
+    return text.replace(urlRegex, function(url) {
+        return '<a href="' + url + '" target="_blank">' + url + '</a>';
+    })
+    // or alternatively
+    // return text.replace(urlRegex, '<a href="$1">$1</a>')
+}
+
+ twitterClient = {
+	  url : "http://search.twitter.com/search.json?callback=?",
+	  url_nocallback : "http://search.twitter.com/search.json"
+ }
+TwitterResult = function(data) {
+	$("#resultsOrder").empty();//.hide();	
+	$("#tweetTemplate").tmpl(data.results).appendTo("#resultsOrder")
+	$(".tweedText").each(function(index) {
+		var origText = $(this).html();
+		$(this).html(urlify(origText));
+	});
+	$("#resultsOrder").focus();//.fadeIn(2000);
+	$("#nextTweets").unbind();
+	if(data.next_page) {
+		$("#nextTweets").click({nextPage : data.next_page}, nextHandler);		
+	} else {
+		$("#nextTweets").click(function() {return false;});		
+	}
+	$("#nextTweets").toggleClass("active", data.next_page != null);
+	$("#previousTweets").unbind();	
+	if (data.previous_page) {
+		$("#previousTweets").click({nextPage : data.previous_page}, nextHandler);		
+	} else {
+		$("#previousTweets").click(function() {return false;});		
+	}
+	$("#previousTweets").toggleClass("active", data.previous_page != null);
+	$(".fullTweet:eq(0)").show("slow", function() {
+	$(this).next(".fullTweet").fadeIn("50",arguments.callee)
+	});
+}
+searchHandler = function() {
+	$.getJSON(twitterClient.url, 
+			  {
+		  		q:$("#searchInput").val(),
+		  		rpp: 1500,
+		  		randomParam : Math.random() * 1000
+		  	}, 
+		  	TwitterResult
+		).error(function(ajaxEvent) 
+				{
+			alert('Failed')
+		});
+	
+	/*$.ajax({
+			global : true,
+			url: twitterClient.url_nocallback,
+			data:"q="+$("#searchInput").val()+"&rpp=1500",
+			dataType : "json"
+	}			
+	).success(TwitterResult).error(function(ajaxEvent) 
+			{
+		alert('Failed')
+	});*/
+	
+	 
+};
+nextHandler = function(event) {
+	  $.getJSON(twitterClient.url+event.data.nextPage.replace("?",'&'), 
+			  {
+		  	}, 
+		  	TwitterResult
+		);
+};
+// need to set global=true for JSONP requests
+jQuery.ajaxPrefilter(function( options ) {
+    options.global = true;
+});
+$(document).ready(function() {
+	$("#progressIndicator").ajaxStart(function() {
+		$(this).show();	
+	});
+	$("#progressIndicator").ajaxStop(function() {
+		$(this).hide();	
+	});
+	$("button").button().click(searchHandler);
+
+});
+</script>
+</head>
+<body>
+<div id="progressIndicator" style="display:none">	
+	<img src="images/ajax-loader.gif" height="24" width="24"/>
+</div>
+<input id="searchInput" type="text" size="50" class="ui-widget ui-state-default ui-corner-all"/>
+<button id="button" class="ui-button ui-button-text-only ui-widget ui-state-default ui-corner-all">
+   <span class="ui-button-text">Tweets</span>
+</button> 
+<div id="results">
+<a id="previousTweets" class="inactive" href="#">Previous tweets</a>
+<a id="nextTweets" class="inactive" href="#">Next tweets</a>
+<ol id="resultsOrder"></ol></div>
+		<!-- 
+	<div id="tweet1">
+		<img src="http://a3.twimg.com/profile_images/1201205814/_____normal.jpg" alt="" />
+		<span class="tweetUser"><a href="http://www.twitter.com/sora0073" target="new">sora0073</a></span>
+		<span class="tweedText">Some cool twittertext.</span>
+	</div>
+		-->
+</body>
+</html>
