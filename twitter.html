@@ -64,7 +64,7 @@ TwitterResult = function(data) {
 		$("#nextTweets").click(function() {return false;});		
 	}
 	$("#nextTweets").toggleClass("active", data.next_page != null);
-	$("#nextTweets").attr("title", data.next_page != null ? "Click to see next tweets" : "");
+	$("#nextTweets").attr("title", data.next_page != null ? "Click to see next tweets" : "Reached end of tweets.");
 	$("#previousTweets").unbind();	
 	if (data.previous_page) {
 		$("#previousTweets").click({nextPage : data.previous_page}, nextHandler);		
@@ -72,7 +72,7 @@ TwitterResult = function(data) {
 		$("#previousTweets").click(function() {return false;});		
 	}
 	$("#previousTweets").toggleClass("active", data.previous_page != null);
-	$("#previousTweets").attr("title", data.previous_page != null ? "Click to see previous tweets" : "");
+	$("#previousTweets").attr("title", data.previous_page != null ? "Click to see previous tweets" : "Reached beginning of tweets.");
 	
 	$(".fullTweet:eq(0)").show("slow", function() {
 	$(this).next(".fullTweet").fadeIn("50",arguments.callee)
