@@ -102,5 +102,10 @@ $(document).ready(function() {
 		$(this).hide();	
 	});
 	$("button").button().click(searchHandler);
-
+	/*$("#searchInput").focus(function() {
+			$(this).addClass("shadow");
+		}).focusout(function() {
+			$(this).removeClass("shadow");
+		});
+		*/
 });

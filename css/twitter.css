@@ -13,3 +13,9 @@
  .fullTweet:hover {
    background-color: #66FFFF;
 }
+input:focus, button:focus, button:hover {
+	box-shadow: 0 0 8px rgba(82, 168, 236, 0.6);
+}
+input, button {
+-moz-transition: box-shadow 0.2s linear 0s;
+}
