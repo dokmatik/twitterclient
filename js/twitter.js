@@ -28,7 +28,10 @@ function urlify(text) {
  }
 TwitterResult = function(data) {
 	$("#resultsOrder").empty();//.hide();	
-	$("#tweetTemplate").tmpl(data.results).appendTo("#resultsOrder")
+	
+	var tweetHTML = Mustache.render($('#mustache_tweetTemplate').html(), data);
+	$('#resultsOrder').html(tweetHTML);
+	
 	$(".tweedText").each(function(index) {
 		var origText = $(this).html();
 		$(this).html(urlify(origText));
@@ -61,7 +64,7 @@ searchHandler = function() {
 	$.getJSON(twitterClient.url, 
 			  {
 		  		q:$("#searchInput").val(),
-		  		rpp: 1500,
+		  		rpp: 10,
 		  		randomParam : Math.random() * 1000
 		  	}, 
 		  	TwitterResult
