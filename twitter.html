@@ -24,6 +24,14 @@
 {{/results}}
 </script>
 
+<script id="mustache_searchHistoryTemplate" type="text/template">
+{{#results}}
+<li class="searchHistory">
+		{{searchString}}
+</li>
+{{/results}}
+</script>
+
 </head>
 <body>
 <div id="progressIndicator" style="display:none">	
@@ -40,6 +48,15 @@
 <div id="results">
 <a id="previousTweets" class="inactive" href="#" title="No tweets yet">Previous tweets</a>
 <a id="nextTweets" class="inactive" href="#" title="No tweets yet">Next tweets</a>
+<!-- Search history -->
+<div id="searchHistory" onSearch="showSearchHistory">
+<ul>
+	<li>#mongodb</li>
+	<li>#jdbc</li>
+	<li>manning promo code</li>
+</ul>
+</div>
+
 <ol id="resultsOrder"></ol></div>
 		<!-- 
 	<div id="tweet1">

@@ -19,3 +19,8 @@ input:focus, button:focus, button:hover {
 input, button, li {
 -moz-transition: box-shadow 0.2s linear 0s, background 0.2s linear 0s;
 }
+
+.searchHistory:hover {
+	 text-decoration:underline;
+	 cursor:pointer;
+}

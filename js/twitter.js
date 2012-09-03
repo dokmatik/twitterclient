@@ -93,6 +93,41 @@ nextHandler = function(event) {
 		  	TwitterResult
 		);
 };
+
+var updateSearchHistoryHandler = function(event) {
+	
+	var searches = localStorage.getObj('searches');
+	if (!searches)
+		searches = [];
+	var searchEntry ={'searchString' : $('#searchInput').val(), "date" : new Date()};
+	var updates = 0;
+	var searches = searches.map(function(se) {
+		if (se.searchString == searchEntry.searchString) {
+			updates++;
+			return {'searchString' : searchEntry.searchString, "date" : new Date()};
+		}
+		return se;
+		});
+	if (searchEntry.searchString && updates == 0) {
+		searches.push(searchEntry);	
+	}
+	localStorage.setObj('searches',searches);
+	var e = jQuery.Event("updateSearchHistory");
+	$("[onSearch]").trigger(e);
+
+}
+var showSearchHistory = function() {
+	var searches = localStorage.getObj('searches');
+
+	$(this).children("ul").empty();
+	searches = searches.sort(function(se1, se2) {
+		return se1.date < se2.date ? 1 :
+			(se1.date > se2.date ? -1 : 0);
+	});
+	var searchHistoryHTML = Mustache.render($('#mustache_searchHistoryTemplate').html(), {'results': searches});
+	$(this).children("ul").html(searchHistoryHTML);
+}
+
 // need to set global=true for JSONP requests
 jQuery.ajaxPrefilter(function( options ) {
     options.global = true;
@@ -104,11 +139,15 @@ $(document).ready(function() {
 	$("#progressIndicator").ajaxStop(function() {
 		$(this).hide();	
 	});
-	$("button").button().click(searchHandler);
-	/*$("#searchInput").focus(function() {
-			$(this).addClass("shadow");
-		}).focusout(function() {
-			$(this).removeClass("shadow");
-		});
-		*/
+	$("button").button().click(updateSearchHistoryHandler).click(searchHandler);
+	
+	// extend Storage object to handle JSON object properly
+	Storage.prototype.setObj = function(key, obj) {
+		return this.setItem(key, JSON.stringify(obj))
+	}
+	Storage.prototype.getObj = function(key) {
+		return JSON.parse(this.getItem(key))
+	}
+	$('[onSearch]').on("updateSearchHistory",showSearchHistory);
+	$("[onSearch]").trigger("updateSearchHistory");
 });
