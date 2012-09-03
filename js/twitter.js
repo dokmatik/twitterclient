@@ -118,7 +118,8 @@ var updateSearchHistoryHandler = function(event) {
 }
 var showSearchHistory = function() {
 	var searches = localStorage.getObj('searches');
-
+	if (!searches)
+		searches = [];
 	$(this).children("ul").empty();
 	searches = searches.sort(function(se1, se2) {
 		return se1.date < se2.date ? 1 :
@@ -126,6 +127,10 @@ var showSearchHistory = function() {
 	});
 	var searchHistoryHTML = Mustache.render($('#mustache_searchHistoryTemplate').html(), {'results': searches});
 	$(this).children("ul").html(searchHistoryHTML);
+	$(".searchHistory").click(function (e) {
+		$("#searchInput").val(e.target.innerText);
+		$("button").trigger("click");
+	});
 }
 
 // need to set global=true for JSONP requests
