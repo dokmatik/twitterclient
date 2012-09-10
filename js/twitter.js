@@ -112,26 +112,58 @@ var updateSearchHistoryHandler = function(event) {
 		searches.push(searchEntry);	
 	}
 	localStorage.setObj('searches',searches);
-	var e = jQuery.Event("updateSearchHistory");
-	$("[onSearch]").trigger(e);
+	$("[onSearch]").trigger("updateSearchHistory");
 
 }
-var showSearchHistory = function() {
-	var searches = localStorage.getObj('searches');
-	if (!searches)
-		searches = [];
-	$(this).children("ul").empty();
-	searches = searches.sort(function(se1, se2) {
-		return se1.date < se2.date ? 1 :
-			(se1.date > se2.date ? -1 : 0);
-	});
-	var searchHistoryHTML = Mustache.render($('#mustache_searchHistoryTemplate').html(), {'results': searches});
-	$(this).children("ul").html(searchHistoryHTML);
-	$(".searchHistory").click(function (e) {
-		$("#searchInput").val(e.target.innerText);
-		$("button").trigger("click");
-	});
-}
+/* SearchHistoryWidget */
+
+var SearchHistory = (function() {
+	//var widgetDOM,
+	//	historyAPI;
+	
+	var shConstructor = function SH(_jqElement, _historyAPI) {
+		if (false === (this instanceof SH)) {
+			return new SH();
+		}
+		widgetDOM = _jqElement;
+		historyAPI = _historyAPI;
+
+	function defaultAnimator() {
+		widgetDOM.hover(function() {
+			$("#overlay").fadeIn(100, 
+				function() {
+					widgetDOM.children("ul").slideDown(100)
+				})
+			},
+			function() {widgetDOM.children("ul").slideUp(100, function() {
+				$("#overlay").fadeOut(100)
+			})})
+		};
+	
+		defaultAnimator();		
+	}
+	shConstructor.prototype =  {
+		render : function(clickHandler) {
+			var searches = historyAPI.get.call();
+			if (!searches)
+				searches = [];
+			var ulElements = widgetDOM.children("ul");
+			ulElements.empty();
+			searches = searches.sort(function(se1, se2) {
+				return se1.date < se2.date ? 1 :
+					(se1.date > se2.date ? -1 : 0);
+			});
+			var searchHistoryHTML = Mustache.render($('#mustache_searchHistoryTemplate').html(), {'results': searches});
+			ulElements.html(searchHistoryHTML);
+			$(".searchHistory").click(clickHandler);
+		},
+		widget : function() {
+			return this.widgetDOM;
+		},
+	};
+	
+	return shConstructor;
+}());
 
 // need to set global=true for JSONP requests
 jQuery.ajaxPrefilter(function( options ) {
@@ -153,6 +185,15 @@ $(document).ready(function() {
 	Storage.prototype.getObj = function(key) {
 		return JSON.parse(this.getItem(key))
 	}
-	$('[onSearch]').on("updateSearchHistory",showSearchHistory);
+	a = new SearchHistory($("#searchHistory"),{get : function() {
+		return localStorage.getObj('searches')
+		}});
+	$('[onSearch]').on("updateSearchHistory",function() {
+		a.render(function (e) {
+			$("#searchInput").val($(e.target).text().trim());
+			$("button").trigger("click");
+		})
+	});
 	$("[onSearch]").trigger("updateSearchHistory");
+	
 });

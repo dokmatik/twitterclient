@@ -23,4 +23,20 @@ input, button, li {
 .searchHistory:hover {
 	 text-decoration:underline;
 	 cursor:pointer;
+	 list-style-type:circle;
+	 background : #66FFFF;
+
+}
+div#searchHistory {
+	position: relative;
+	 z-index: 200;
+}
+.overlay{
+    background:transparent url(../images/overlay.png) repeat top left;
+    position:fixed;
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    z-index:100;
 }
