@@ -155,7 +155,21 @@ var SearchHistory = (function() {
 			});
 			var searchHistoryHTML = Mustache.render($('#mustache_searchHistoryTemplate').html(), {'results': searches});
 			ulElements.html(searchHistoryHTML);
-			$(".searchHistory").click(clickHandler);
+			$(".searchHistoryElement").click(clickHandler);
+
+			// handler for removing a historic search element
+			$(".removeSearchHistoryElement").click(function(event) {
+				var searchFunction = function(_searchString) {
+					return function(se,i) {
+						return se.searchString === _searchString
+					}
+				}
+				var searchString = $(this).prev().text(); // find the searchString in the dom
+				var searches = localStorage.getObj('searches');
+				searches = $.grep(searches, searchFunction(searchString), true);
+				localStorage.setObj('searches',searches);
+				$("[onSearch]").trigger("updateSearchHistory");
+			});
 		},
 		widget : function() {
 			return this.widgetDOM;

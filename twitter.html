@@ -27,7 +27,8 @@
 <script id="mustache_searchHistoryTemplate" type="text/template">
 {{#results}}
 <li class="searchHistory ui-widget-content">
-		{{searchString}}
+		<span class="searchHistoryElement clickable">{{searchString}}</span>
+		<img class="removeSearchHistoryElement clickable" align="right" src="images/onebit-iconset/01/PNG/onebit_33.PNG" width="16" height="16" border="0"/>
 </li>
 {{/results}}
 </script>
