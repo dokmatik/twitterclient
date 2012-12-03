@@ -1,4 +1,14 @@
-<p>This is the partial for view 2.</p>
+<ol id="resultsOrder" ng-init="tweets = [{from_user : 'dokmatik', text : 'Cooler Tweet'}]">
+	<li class="fullTweet"  ng-repeat="tweet in tweets" >
+			<h3>
+				<img ng-src="{{tweet.profile_image_url}}" alt="" height="48px" width="48px"/>
+				<span class="tweetUser"><a href="http://www.twitter.com/{{tweet.from_user}}" target="new">{{tweet.from_user}}</a> tweeted on {{tweet.created_at}}</span>
+			</h3>
+			<span class="tweedText ui-widget">{{tweet.text}}</span>
+	</li>
+</ol>
+
+<p>This is the partial for view 2 two.</p>
 <p>
   Showing of 'interpolate' filter:
   {{ 'Current version is v%VERSION%.' | interpolate }}

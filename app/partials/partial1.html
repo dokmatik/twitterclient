@@ -1,1 +1,21 @@
-<p>This is the partial for view 1.</p>
+<form class="form-horizontal">
+    <input id="searchInput" type="text" size="50" placeholder="Search" ng-model="searchQuery"/>
+    <button id="button" class="btn" ng-click="doSearch()">
+        <i class="icon-search"></i>Search
+    </button>
+</form>
+<div id="results">
+    <a id="previousTweets" class="inactive" ng-click="previousTweets()" title="No tweets yet">Previous tweets</a>
+    <a id="nextTweets" class="inactive" ng-click="nextTweets()" title="No tweets yet">Next tweets</a>
+
+    <ol id="resultsOrder">
+        <li class="fullTweet" ng-repeat="tweet in tweets.results" fadein="500" style="display:none">
+            <h3>
+                <img ng-src="{{tweet.profile_image_url}}" alt="" height="48px" width="48px"/>
+                <span class="tweetUser"><a href="http://www.twitter.com/{{tweet.from_user}}" target="new">{{tweet.from_user}}</a> tweeted on {{tweet.created_at}}</span>
+            </h3>
+            <span class="tweedText ui-widget">{{tweet.text}}</span>
+        </li>
+
+    </ol>
+</div>
