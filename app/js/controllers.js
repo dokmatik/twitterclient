@@ -28,6 +28,7 @@ var twitterClient = {
     url_nocallback:"http://search.twitter.com/search.json"
 }
 
+
 function MyCtrl1($scope, $http, $resource) {
     $scope.tweets = {}
     $scope.twitter = $resource('http://search.twitter.com/:action',
