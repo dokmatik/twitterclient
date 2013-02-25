@@ -1,4 +1,4 @@
-'use strict';
+//'use strict';
 
 /* Controllers */
 
@@ -8,18 +8,12 @@ dashBoardApp.directive('fadein', function () {
     return {
         restrict:'A',
         link:function (scope, elm, attrs) {
-            /*jQuery(elm)
-             .css({ opacity: 0 })
-             .animate({ opacity: 1 }, parseInt(attrs.fadein));
-             */
-            elm.bind("click", function () {
-                alert("yeah")
-            })
-            jQuery(elm).fadeIn(parseInt(attrs.fadein) + scope.$index * 250)
-            /*
-             jQuery(elm).next(".fullTweet").show("slow", function() {
-             jQuery(this).next(".fullTweet").fadeIn("50",arguments.callee)
-             });*/
+            elm.css("display","none");
+            if (scope.$last) {
+                jQuery(".fullTweet:eq(0)").show("slow", function() {
+                    jQuery(this).next(".fullTweet").fadeIn(parseInt(attrs.fadein),arguments.callee)
+                });
+            }
         }
     };
 })
@@ -29,7 +23,7 @@ var twitterClient = {
 }
 
 
-function MyCtrl1($scope, $http, $resource) {
+function MyCtrl1($scope, $http, $resource, $timeout) {
     $scope.tweets = {}
     $scope.twitter = $resource('http://search.twitter.com/:action',
         {action:'search.json',
