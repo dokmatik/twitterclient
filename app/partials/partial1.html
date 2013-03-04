@@ -1,16 +1,45 @@
-<div ng-controller="MyCtrl1">
-    <form class="form-horizontal">
+<div ng-contoller="SearchController">
+    <form class="form-horizontal" style="text-align:center">
     <input id="searchInput" type="text" size="50" placeholder="Search" ng-model="searchQuery"/>
     <button id="button" class="btn" ng-click="doSearch()">
         <i class="icon-search"></i>Search
     </button>
-</form>
-<div id="results">
+	</form>
+</div>
+
+<div ng-controller="BooksController" id="bookResults" style="float : left;	width: 50em;">
+    <a class="inactive" ng-click="previous()" title="No books yet">Previous results</a>
+    <a class="inactive" ng-click="next()" title="No books yet">Next results</a>
+
+    <ol id="bookResultsOrder">
+        <li class="fullTweet"  ng-repeat="volume in books.items" fadein2="250" >
+            <h3>
+                <img ng-src="{{volume.volumeInfo.imageLinks.thumbnail}}" alt="" height="48px" width="48px"/>
+                <span class="tweetUser"><a href="http://www.twitter.com/{{tweet.from_user}}" target="new">{{tweet.from_user}}</a>{{volume.volumeInfo.title}}</span>
+            </h3>
+			{{volume.volumeInfo.subtitle}}
+            <span class="tweedText ui-widget">{{volume.volumeInfo.publisher}}</span>
+        </li>
+    </ol>
+	<ol style="list-style:none">
+		<!-- Fill up empty spaces -->
+        <li class="fullTweet"  ng-repeat="fill in fills ">
+            <h3>
+                <img alt="" height="48px" width="48px"/>
+                <span class="tweetUser">&nbsp;</span>
+            </h3>
+            <span class="tweedText ui-widget">&nbsp;</span>
+        </li>
+
+    </ol>
+</div>
+
+<div ng-controller="MyCtrl1" id="results">
     <a id="previousTweets" class="inactive" ng-click="previousTweets()" title="No tweets yet">Previous tweets</a>
     <a id="nextTweets" class="inactive" ng-click="nextTweets()" title="No tweets yet">Next tweets</a>
 
     <ol id="resultsOrder">
-        <li class="fullTweet" ng-repeat="tweet in tweets.results" fadein="250" >
+        <li class="fullTweet" ng-repeat="tweet in tweets.results" fadein2="250" >
             <h3>
                 <img ng-src="{{tweet.profile_image_url}}" alt="" height="48px" width="48px"/>
                 <span class="tweetUser"><a href="http://www.twitter.com/{{tweet.from_user}}" target="new">{{tweet.from_user}}</a> tweeted on {{tweet.created_at}}</span>
@@ -20,4 +49,5 @@
 
     </ol>
 </div>
-</div>
+
+
