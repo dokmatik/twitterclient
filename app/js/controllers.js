@@ -27,7 +27,23 @@ dashBoardApp.factory('mySharedService', function($rootScope) {
 			$rootScope.$broadcast('reset');
 		}
     };
+}).factory('myConfigurationService', function($rootScope) {
+	return {
+		newConfig : function(initialConfig) {
+			initialConfig.toggle = function(key) {
+				this[key] = !this[key];
+			}
+			return initialConfig
+		}
+	}
 });
+
+/*dashBoardApp.run(function($rootScope) {
+	$rootScope.toggleDisplay=function() { 
+		this.config.display = !this.config.display
+	};
+}
+)*/
 
 var twitterClient = {
     url:"http://search.twitter.com/search.json?callback=?",
@@ -35,6 +51,7 @@ var twitterClient = {
 }
 
 function SearchController($scope, sharedService) {
+	$scope.searchQuery='richfaces'
     $scope.doSearch = function () {
 		sharedService.reset();
        sharedService.broadcast($scope.searchQuery)
@@ -42,9 +59,10 @@ function SearchController($scope, sharedService) {
 }
 SearchController.$inject=['$scope','mySharedService']
 
-function MyCtrl1($scope, $http, $resource, $timeout, sharedService, twitter) {
+function MyCtrl1($scope, $http, $resource, $timeout, sharedService, twitter, configurationService) {
     $scope.tweets = {}
-
+	$scope.config = configurationService.newConfig({display : true});
+	
 	$scope.$on('handleBroadcast',function(event, msg) {
 		$scope.tweets = twitter.get({q:msg});
 	});
@@ -59,18 +77,22 @@ function MyCtrl1($scope, $http, $resource, $timeout, sharedService, twitter) {
             $scope.tweets = twitter.paginate({page : parseInt($scope.tweets.page)+1, q: $scope.searchQuery})
         }
     }
+	$scope.toggle=function(id) {
+		
+	}
 }
-MyCtrl1.$inject = ['$scope','$http','$resource','$timeout','mySharedService','twitter'];
+MyCtrl1.$inject = ['$scope','$http','$resource','$timeout','mySharedService','twitter', 'myConfigurationService'];
 
 
 function MyCtrl2() {
 }
 MyCtrl2.$inject = [];
 
-function BooksController($scope, $http, $resource, $timeout, sharedService, googleBooks) {
+function BooksController($scope, $http, $resource, $timeout, sharedService, googleBooks, configurationService) {
 	$scope.books = {};
 	$scope.startIndex=0;
-
+	$scope.config = configurationService.newConfig({display : true});
+	
 	$scope.$on('handleBroadcast', function(event, msg) {
 		$scope.books = googleBooks.volumes({q : msg, startIndex : $scope.startIndex*10}, function(data) {
 			$scope.fills = [];
@@ -90,5 +112,14 @@ function BooksController($scope, $http, $resource, $timeout, sharedService, goog
 		$scope.$broadcast('handleBroadcast', $scope.$parent.searchQuery);
 	}
 	
+	$scope.pageable=function() {
+		return {
+			backwards : $scope.books.items && $scope.books.items.length > 0,
+			forward : $scope.books.items && $scope.books.items.length > 0
+		}
+	}
+	$scope.backwards=function() {
+			return $scope.books.items && $scope.books.items.length > 0
+	}	
 }
-BooksController.$inject = ['$scope','$http','$resource','$timeout','mySharedService', 'googleBooks'];
+BooksController.$inject = ['$scope','$http','$resource','$timeout','mySharedService', 'googleBooks',  'myConfigurationService'];

@@ -7,18 +7,22 @@
 	</form>
 </div>
 
-<div ng-controller="BooksController" id="bookResults" style="float : left;	width: 50em;">
-    <a class="inactive" ng-click="previous()" title="No books yet">Previous results</a>
-    <a class="inactive" ng-click="next()" title="No books yet">Next results</a>
+<div ng-controller="BooksController" id="bookResults" style="float : left;	width:50em; background : yellow">
+	<button class="btn" ng-click="config.toggle('display')">Collapse</button>
+    <a ng-show="pageable().backwards" class="inactive" ng-click="previous()" title="No books yet">Previous results</a>
+    <a ng-show="pageable().forward" class="inactive" ng-click="next()" title="No books yet">Next results</a>
 
-    <ol id="bookResultsOrder">
-        <li class="fullTweet"  ng-repeat="volume in books.items" fadein2="250" >
-            <h3>
-                <img ng-src="{{volume.volumeInfo.imageLinks.thumbnail}}" alt="" height="48px" width="48px"/>
-                <span class="tweetUser"><a href="http://www.twitter.com/{{tweet.from_user}}" target="new">{{tweet.from_user}}</a>{{volume.volumeInfo.title}}</span>
-            </h3>
-			{{volume.volumeInfo.subtitle}}
-            <span class="tweedText ui-widget">{{volume.volumeInfo.publisher}}</span>
+    <ol id="bookResultsOrder" ng-show="config.display">
+        <li class="fullTweet"  ng-repeat="volume in books.items" fadein2="250">
+			<div>
+				<img ng-src="{{volume.volumeInfo.imageLinks.thumbnail}}" alt="" height="48px" width="48px"/>
+				<a ng-href="{{volume.accessInfo.webReaderLink}}" target="_new">{{volume.volumeInfo.title}}</a>
+				{{volume.volumeInfo.subtitle}}
+				<br/>
+				<i>{{volume.volumeInfo.description}}</i>
+				<br/>
+				<span>{{volume.volumeInfo.publisher}}</span>
+			</div>
         </li>
     </ol>
 	<ol style="list-style:none">
@@ -34,11 +38,12 @@
     </ol>
 </div>
 
-<div ng-controller="MyCtrl1" id="results">
+<div ng-controller="MyCtrl1" id="results" style="background : #eee; float:left; width:50em">
+	<button class="btn" ng-click="config.toggle('display')">Collapse</button>
     <a id="previousTweets" class="inactive" ng-click="previousTweets()" title="No tweets yet">Previous tweets</a>
     <a id="nextTweets" class="inactive" ng-click="nextTweets()" title="No tweets yet">Next tweets</a>
 
-    <ol id="resultsOrder">
+    <ol id="resultsOrder" ng-show="config.display">
         <li class="fullTweet" ng-repeat="tweet in tweets.results" fadein2="250" >
             <h3>
                 <img ng-src="{{tweet.profile_image_url}}" alt="" height="48px" width="48px"/>
