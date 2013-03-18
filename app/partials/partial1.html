@@ -5,6 +5,13 @@
         <i class="icon-search"></i>Search
     </button>
 	</form>
+	Latest searches:
+	<ul class="menu">
+		<li ng-repeat="searchElement in latestSearches|orderBy:'date':true">
+			<span  ng-click="reSearch(searchElement.val)">{{searchElement.val}}</span>
+			<img src="img/onebit_33.PNG" width="16" height="16" border="0" ng-click="remove(searchElement)"/>			
+		</li>
+	</ul>
 </div>
 
 <div ng-controller="BooksController" id="bookResults" style="float : left;	width:50em; background : yellow">
@@ -49,7 +56,7 @@
                 <img ng-src="{{tweet.profile_image_url}}" alt="" height="48px" width="48px"/>
                 <span class="tweetUser"><a href="http://www.twitter.com/{{tweet.from_user}}" target="new">{{tweet.from_user}}</a> tweeted on {{tweet.created_at}}</span>
             </h3>
-            <span class="tweedText ui-widget">{{tweet.text}}</span>
+            <span class="tweedText ui-widget"  ng-bind-html-unsafe="tweet.text | urlify"/>
         </li>
 
     </ol>

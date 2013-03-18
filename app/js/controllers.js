@@ -50,14 +50,29 @@ var twitterClient = {
     url_nocallback:"http://search.twitter.com/search.json"
 }
 
-function SearchController($scope, sharedService) {
+function SearchController($scope, sharedService, storageService) {
 	$scope.searchQuery='richfaces'
+	$scope.latestSearches = storageService.get('searches')
+
     $scope.doSearch = function () {
 		sharedService.reset();
        sharedService.broadcast($scope.searchQuery)
     }
+	$scope.reSearch = function(val) {
+		$scope.searchQuery = val;
+		this.doSearch();		
+	}
+	$scope.remove = function(historyElement) {
+		storageService.remove('searches',historyElement)
+		$scope.latestSearches = storageService.get('searches')
+	}
+	
+	$scope.$on('handleBroadcast',function(event, msg) {
+		storageService.update('searches',msg);
+		$scope.latestSearches = storageService.get('searches')
+	})
 }
-SearchController.$inject=['$scope','mySharedService']
+SearchController.$inject=['$scope','mySharedService','storageService']
 
 function MyCtrl1($scope, $http, $resource, $timeout, sharedService, twitter, configurationService) {
     $scope.tweets = {}

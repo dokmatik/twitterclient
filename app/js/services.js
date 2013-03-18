@@ -34,4 +34,41 @@ angular.module('InfoDashboard.services', ['ngResource']).
 			
 		return r;
   }
-  );
+  )
+  .factory('storageService', function() {
+	function StorageService() {}
+	StorageService.prototype.get = function (key) {
+			return localStorage.getObj(key)
+	}
+	StorageService.prototype.set =		
+		function (key, obj) {
+			localStorage.setObj(key, obj)
+		}
+		
+	StorageService.prototype.update= function (key, newVal) {
+			var searches = localStorage.getObj(key);
+			if (!searches)
+				searches = [];
+			var searchEntry ={'val' : newVal, "date" : new Date()};
+			var updates = 0;
+			var searches = searches.map(function(se) {
+				if (se.val == searchEntry.val) {
+					updates++;
+					return {'val' : searchEntry.val, "date" : new Date()};
+				}
+				return se;
+				});
+			if (searchEntry.val && updates == 0) {
+				searches.push(searchEntry);	
+			}
+			this.set(key,searches);			
+		}
+	
+	StorageService.prototype.remove = function(key, currentVal) {
+		var elements = localStorage.getObj(key);
+		elements.splice(elements.indexOf(currentVal),1);
+		this.set(key,elements);
+	}
+	
+	return new StorageService();
+  });
