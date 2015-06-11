@@ -130,8 +130,9 @@
 
             StorageService.prototype.update = function (key, newVal) {
                 var searches = localStorage.getObj(key);
-                if (!searches)
+                if (!searches) {
                     searches = [];
+                }
                 var searchEntry = {'val': newVal, "date": new Date()};
                 var updates = 0;
                 var searches = searches.map(function (se) {
@@ -157,5 +158,6 @@
         })
         .config(function ($httpProvider) {
             serviceModule.$httpProvider = $httpProvider
+            delete $httpProvider.defaults.headers.common['X-Requested-With'];
         });
 })()

@@ -18,7 +18,6 @@ var dashBoardApp = angular.module('InfoDashboard', ['InfoDashboard.filters', 'In
                 // or alternatively
                 // return text.replace(urlRegex, '<a href="$1">$1</a>')
             }
-
             if (text)
                 return urlify(text)
             else
