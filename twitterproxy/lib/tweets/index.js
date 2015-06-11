@@ -3,9 +3,10 @@
  */
 var Client = require('node-rest-client').Client;
 
-module.exports = function () {
-    this.twitterClient = new Client();
-    this.twitterClient.registerMethod('search', 'https://api.twitter.com/1.1/search/${action}', 'GET');
+module.exports.TweetsService = function () {
+    var twitterClient = new Client();
+
+    twitterClient.registerMethod('search', 'https://api.twitter.com/1.1/search/${action}', 'GET');
 
     this.search = function (opts, callback) {
         console.log('Will query Twitter now.');
@@ -21,9 +22,10 @@ module.exports = function () {
             },
             headers: {Authorization: 'Bearer ' + opts.access_token}
         }
-        this.twitterClient.methods.search(args, function (data, response) {
+        twitterClient.methods.search(args, function (data, response) {
             console.log(data);
             callback(data);
         })
     }
+    return this;
 }

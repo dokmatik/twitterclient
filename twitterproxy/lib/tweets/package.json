@@ -1,0 +1,7 @@
+{
+  "name": "tweets",
+  "version": "1.0.0",
+  "dependencies": {
+    "node-rest-client": "^1.5.1"
+  }
+}

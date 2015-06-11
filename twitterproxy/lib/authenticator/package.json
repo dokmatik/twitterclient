@@ -1,0 +1,7 @@
+{
+  "name": "authenticator",
+  "version": "1.0.0",
+  "dependencies": {
+    "request": "^2.57.0"
+  }
+}
