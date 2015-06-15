@@ -1,6 +1,7 @@
 {
   "name": "tweets",
   "version": "1.0.0",
+  "start": "index.js",
   "dependencies": {
     "node-rest-client": "^1.5.1"
   }

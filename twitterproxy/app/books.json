@@ -1,0 +1,652 @@
+{
+  "kind": "books#volumes",
+  "totalItems": 594,
+  "items": [
+    {
+      "kind": "books#volume",
+      "id": "xxzCSV1WftYC",
+      "etag": "ILugAvXCK3c",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/xxzCSV1WftYC",
+      "volumeInfo": {
+        "title": "Alzheimer",
+        "subtitle": "Spurensuche im Niemandsland",
+        "authors": [
+          "Michael Jürgs"
+        ],
+        "publisher": "C. Bertelsmann Verlag",
+        "publishedDate": "2009-01-26",
+        "description": "ALZHEIMER – EINE REISE IN DIE NACHT. ZUM 100. JAHRESTAG DER ENTDECKUNG DER KRANKHEIT. Alzheimer geht uns alle an. Michael Jürgs liefert eine umfassende, wissenschaftlich geprüfte Darstellung der Krankheit, verknüpft mit der Biographie Alois Alzheimers. Ein bewegendes Buch, in dem Betroffene, ihre Familien, Ärzte, Pfleger und Wissenschaftler zu Wort kommen. \"Das Hirn wird brüchig wie ein alter Stiefel.\" So drastisch umschreibt die Fachzeitschrift Selecta das, was Alzheimer im Gehirn anrichtet. Die Krankheit des Vergessens, die auf Grund steigender Lebenserwartung statistisch jeden vierten Menschen über achtzig befallen kann, zerstört den Geist. Wer sie erleidet, verliert seine Biographie, seine Identität, sich selbst auf einem unaufhaltsamen Absturz ins Nichts. Die Diagnose Alzheimer heißt langsamer Abschied vom Ich, heißt psychisches Sterben im lebendigen Körper. Es kann alle treffen, denn der Kabelbrand im Kopf macht alle gleich. Michael Jürgs verbindet die Lebensgeschichte des Arztes Alois Alzheimer, der 1906 im Gehirn einer an Demenz verstorbenen Patientin jene Veränderungen erkennt, die später seinen Namen tragen, mit der deutschen Geschichte und der Geschichte der Erforschung der Krankheit. Er befragt die Forscher, die Mittel testen, um die Krankheit zu heilen oder wenigstens zu stoppen. Er recherchiert in den Laboren der Pharmakonzerne und beschreibt die Hoffnungen der Experten, mit Hilfe der Gentechnik einen Durchbruch zu schaffen. Er erzählt vom Schicksal der Prominenten, die an der Krankheit zu Grunde gingen: Rita Hayworth, Iris Murdoch, Sugar Ray Robinson, Ronald Reagan, Harold Wilson, Helmut Zacharias, Herbert Wehner, Helmut Schön, Rudolf Bing – und Immanuel Kant. Bis heute, hundert Jahre, nachdem Alois Alzheimer unter dem Mikroskop die Ursachen für die Krankheit entdeckte, gibt es kein Medikament. Das wichtigste Heilmittel bleibt menschliche Zuwendung. • Wissenschaftlich überarbeitete und aktualisierte Neuausgabe • Gespräche mit Betroffenen, Angehörigen, Ärzten, Wissenschaftlern • Kongresse und Symposien zum 100. Jahrestag • Mit ausführlichem Adressteil für Deutschland, Österreich, Schweiz",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "3641015928"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9783641015923"
+          }
+        ],
+        "pageCount": 448,
+        "printType": "BOOK",
+        "categories": [
+          "History"
+        ],
+        "contentVersion": "1.1.1.0.preview.3",
+        "imageLinks": {
+          "smallThumbnail": "http://bks3.books.google.de/books?id=xxzCSV1WftYC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://bks3.books.google.de/books?id=xxzCSV1WftYC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "de",
+        "previewLink": "http://books.google.de/books?id=xxzCSV1WftYC&printsec=frontcover&dq=Alzheimer&hl=&cd=1&source=gbs_api",
+        "infoLink": "http://books.google.de/books?id=xxzCSV1WftYC&dq=Alzheimer&hl=&source=gbs_api",
+        "canonicalVolumeLink": "http://books.google.de/books/about/Alzheimer.html?hl=&id=xxzCSV1WftYC"
+      },
+      "saleInfo": {
+        "country": "DE",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 9.99,
+          "currencyCode": "EUR"
+        },
+        "retailPrice": {
+          "amount": 9.99,
+          "currencyCode": "EUR"
+        },
+        "buyLink": "http://books.google.de/books?id=xxzCSV1WftYC&dq=Alzheimer&hl=&buy=&source=gbs_api"
+      },
+      "accessInfo": {
+        "country": "DE",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.de/books/download/Alzheimer-sample-epub.acsm?id=xxzCSV1WftYC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.de/books/download/Alzheimer-sample-pdf.acsm?id=xxzCSV1WftYC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://books.google.de/books/reader?id=xxzCSV1WftYC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+        "accessViewStatus": "SAMPLE"
+      },
+      "searchInfo": {
+        "textSnippet": "ALZHEIMER – EINE REISE IN DIE NACHT. ZUM 100. JAHRESTAG DER ENTDECKUNG DER KRANKHEIT. Alzheimer geht uns alle an."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "OKVZNr_D7eoC",
+      "etag": "QdW2BH8CP94",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/OKVZNr_D7eoC",
+      "volumeInfo": {
+        "title": "Alzheimer",
+        "authors": [
+          "Wan-Chung Chen"
+        ],
+        "publisher": "BoD – Books on Demand",
+        "publishedDate": "2012-09",
+        "description": "Es wird viel ber das Leid der Alzheimer-Betroffenen und ihrer Angeh rigen gesprochen. ber Vorbeugungsma nahmen wird dagegen noch nicht viel nachgedacht. Es ist das Anliegen dieses Buches, Ma nahmen zur Aktivierung des Gehirns vorzustellen, um die Krankheit so weit wie m glich hinauszuz gern, insbesondere mit Hilfe von geistigen und k rperlichen Aktivit ten sowie durch berpr fung und gegebenenfalls Umstellung der Ern hrung. Oftmals ist es auch angeraten, ber die allgemeine Lebenseinstellung nachzudenken und diese zu ndern. Wichtig ist, fr hzeitig mit den Vorbeugungsma nahmen zu beginnen, um einen gr t m glichen Erfolg zu erreichen.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "384822190X"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9783848221905"
+          }
+        ],
+        "pageCount": 66,
+        "printType": "BOOK",
+        "categories": [
+          "Health & Fitness"
+        ],
+        "contentVersion": "preview-1.0.0",
+        "imageLinks": {
+          "smallThumbnail": "http://bks9.books.google.de/books?id=OKVZNr_D7eoC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://bks9.books.google.de/books?id=OKVZNr_D7eoC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "de",
+        "previewLink": "http://books.google.de/books?id=OKVZNr_D7eoC&printsec=frontcover&dq=Alzheimer&hl=&cd=2&source=gbs_api",
+        "infoLink": "http://books.google.de/books?id=OKVZNr_D7eoC&dq=Alzheimer&hl=&source=gbs_api",
+        "canonicalVolumeLink": "http://books.google.de/books/about/Alzheimer.html?hl=&id=OKVZNr_D7eoC"
+      },
+      "saleInfo": {
+        "country": "DE",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "DE",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://books.google.de/books/reader?id=OKVZNr_D7eoC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+        "accessViewStatus": "SAMPLE"
+      },
+      "searchInfo": {
+        "textSnippet": "Es wird viel ber das Leid der Alzheimer-Betroffenen und ihrer Angeh rigen gesprochen. ber Vorbeugungsma nahmen wird dagegen noch nicht viel nachgedacht."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "riv1NEO8G3IC",
+      "etag": "SpqmDo9RTPk",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/riv1NEO8G3IC",
+      "volumeInfo": {
+        "title": "Alzheimer: was tun, wenn die Krankheit beginnt?",
+        "authors": [
+          "Mechthild Niemann-Mirmehdi",
+          "Richard Mahlberg"
+        ],
+        "publisher": "Georg Thieme Verlag",
+        "publishedDate": "2003",
+        "description": "Praktischer Ratgeber für Betroffene und Angehörige zu den medizinischen, psychologischen und soziotherapeutischen Aspekten der Erkrankung.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "3830430345"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9783830430346"
+          }
+        ],
+        "pageCount": 135,
+        "printType": "BOOK",
+        "contentVersion": "0.0.1.0.preview.0",
+        "imageLinks": {
+          "smallThumbnail": "http://bks4.books.google.de/books?id=riv1NEO8G3IC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://bks4.books.google.de/books?id=riv1NEO8G3IC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "de",
+        "previewLink": "http://books.google.de/books?id=riv1NEO8G3IC&printsec=frontcover&dq=Alzheimer&hl=&cd=3&source=gbs_api",
+        "infoLink": "http://books.google.de/books?id=riv1NEO8G3IC&dq=Alzheimer&hl=&source=gbs_api",
+        "canonicalVolumeLink": "http://books.google.de/books/about/Alzheimer_was_tun_wenn_die_Krankheit_beg.html?hl=&id=riv1NEO8G3IC"
+      },
+      "saleInfo": {
+        "country": "DE",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "DE",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://books.google.de/books/reader?id=riv1NEO8G3IC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+        "accessViewStatus": "SAMPLE"
+      },
+      "searchInfo": {
+        "textSnippet": "Praktischer Ratgeber für Betroffene und Angehörige zu den medizinischen, psychologischen und soziotherapeutischen Aspekten der Erkrankung."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "uU9h_SkHPFAC",
+      "etag": "RXDybQxPzZM",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/uU9h_SkHPFAC",
+      "volumeInfo": {
+        "title": "Alzheimer & Demenzen verstehen",
+        "subtitle": "Diagnose, Behandlung, Alltag, Betreuung",
+        "authors": [
+          "Komteneznetz Demenzen,"
+        ],
+        "publisher": "TRIAS",
+        "publishedDate": "2011-07-13",
+        "description": "Alzheimer und andere Demenzen verändern die Persönlichkeit. Für Angehörige, ist es hart, den Verfall eines vertrauten Menschen mitzuerleben - und den richtigen Zugang zu finden! Dieses Basiswissen bietet fundierte und kompetente Informationen zu allen Fragen rund um Alzheimer und Demenz. Es erklärt leicht verständlich alle Symptome, Untersuchungen und Therapiemöglichkeiten. Für den täglichen Umgang mit Alzheimer-Erkrankten bietet es Antworten auf drängende Fragen, eine Fülle von praktischen Ratschlägen und konkreten Hilfen.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "3830464428"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9783830464426"
+          }
+        ],
+        "pageCount": 176,
+        "printType": "BOOK",
+        "categories": [
+          "Health & Fitness"
+        ],
+        "contentVersion": "0.1.0.0.preview.1",
+        "imageLinks": {
+          "smallThumbnail": "http://bks9.books.google.de/books?id=uU9h_SkHPFAC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://bks9.books.google.de/books?id=uU9h_SkHPFAC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "de",
+        "previewLink": "http://books.google.de/books?id=uU9h_SkHPFAC&printsec=frontcover&dq=Alzheimer&hl=&cd=4&source=gbs_api",
+        "infoLink": "http://books.google.de/books?id=uU9h_SkHPFAC&dq=Alzheimer&hl=&source=gbs_api",
+        "canonicalVolumeLink": "http://books.google.de/books/about/Alzheimer_Demenzen_verstehen.html?hl=&id=uU9h_SkHPFAC"
+      },
+      "saleInfo": {
+        "country": "DE",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 13.99,
+          "currencyCode": "EUR"
+        },
+        "retailPrice": {
+          "amount": 13.99,
+          "currencyCode": "EUR"
+        },
+        "buyLink": "http://books.google.de/books?id=uU9h_SkHPFAC&dq=Alzheimer&hl=&buy=&source=gbs_api"
+      },
+      "accessInfo": {
+        "country": "DE",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.de/books/download/Alzheimer_Demenzen_verstehen-sample-pdf.acsm?id=uU9h_SkHPFAC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://books.google.de/books/reader?id=uU9h_SkHPFAC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+        "accessViewStatus": "SAMPLE"
+      },
+      "searchInfo": {
+        "textSnippet": "Alzheimer und andere Demenzen verändern die Persönlichkeit."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "ZA6n-iKmdSYC",
+      "etag": "i2UQzwhav84",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/ZA6n-iKmdSYC",
+      "volumeInfo": {
+        "title": "Alzheimer und Demenzen",
+        "subtitle": "Unterstützung für Angehörige",
+        "authors": [
+          "Sabine Engel"
+        ],
+        "publisher": "Georg Thieme Verlag",
+        "publishedDate": "2006-10",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "3830433816"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9783830433811"
+          }
+        ],
+        "pageCount": 204,
+        "printType": "BOOK",
+        "contentVersion": "0.0.1.0.preview.0",
+        "imageLinks": {
+          "smallThumbnail": "http://bks5.books.google.de/books?id=ZA6n-iKmdSYC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://bks5.books.google.de/books?id=ZA6n-iKmdSYC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "de",
+        "previewLink": "http://books.google.de/books?id=ZA6n-iKmdSYC&printsec=frontcover&dq=Alzheimer&hl=&cd=5&source=gbs_api",
+        "infoLink": "http://books.google.de/books?id=ZA6n-iKmdSYC&dq=Alzheimer&hl=&source=gbs_api",
+        "canonicalVolumeLink": "http://books.google.de/books/about/Alzheimer_und_Demenzen.html?hl=&id=ZA6n-iKmdSYC"
+      },
+      "saleInfo": {
+        "country": "DE",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "DE",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://books.google.de/books/reader?id=ZA6n-iKmdSYC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+        "accessViewStatus": "SAMPLE"
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "lrKQ-xGHL78C",
+      "etag": "e1Ik6gqFFUo",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/lrKQ-xGHL78C",
+      "volumeInfo": {
+        "title": "Alzheimer",
+        "subtitle": "A Journey Together",
+        "authors": [
+          "Federica Caracciolo"
+        ],
+        "publisher": "Jessica Kingsley Publishers",
+        "publishedDate": "2005-09-06",
+        "description": "Francesco Caracciolo was a successful architect and, with his wife Federica, also worked as photo reporter for the United Nations, travelling extensively throughout Africa and Asia. A diagnosis of Alzheimer's disease and Francesco's rapidly vanishing independence put an end to their travels. With thoughtfulness and honesty, Federica tells of her experience of caring for her husband during his seven-year battle with Alzheimer's. She recounts the progression of the disease in all its distressing phases, revealing the very special relationship that developed between the carer and the patient and the inevitable reversal of roles. The author describes how her initial distress and irritation gave way to compassion and tenderness, and how in the end this terrible and devastating experience turned into a love story. While never losing sight of her husband's personality, she also offers strategies for coping with the solitude surrounding the couple in a society where mental illness is still looked upon with fear and dismay. This poignant first-hand account shares with the reader the remarkable realization that it is possible to emerge from the battle with Alzheimer's undefeated and, indeed, enriched. It will offer hope and courage to those with Alzheimer's, as well as their families and friends.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "1843104083"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9781843104087"
+          }
+        ],
+        "pageCount": 108,
+        "printType": "BOOK",
+        "categories": [
+          "Family & Relationships"
+        ],
+        "contentVersion": "preview-1.0.0",
+        "imageLinks": {
+          "smallThumbnail": "http://bks0.books.google.de/books?id=lrKQ-xGHL78C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://bks0.books.google.de/books?id=lrKQ-xGHL78C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.de/books?id=lrKQ-xGHL78C&printsec=frontcover&dq=Alzheimer&hl=&cd=6&source=gbs_api",
+        "infoLink": "http://books.google.de/books?id=lrKQ-xGHL78C&dq=Alzheimer&hl=&source=gbs_api",
+        "canonicalVolumeLink": "http://books.google.de/books/about/Alzheimer.html?hl=&id=lrKQ-xGHL78C"
+      },
+      "saleInfo": {
+        "country": "DE",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "DE",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.de/books/download/Alzheimer-sample-pdf.acsm?id=lrKQ-xGHL78C&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://books.google.de/books/reader?id=lrKQ-xGHL78C&hl=&printsec=frontcover&output=reader&source=gbs_api",
+        "accessViewStatus": "SAMPLE"
+      },
+      "searchInfo": {
+        "textSnippet": "A diagnosis of Alzheimer&#39;s disease and Francesco&#39;s rapidly vanishing independence put an end to their travels."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "QxqLBj90SNkC",
+      "etag": "uvvwFoJDby8",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/QxqLBj90SNkC",
+      "volumeInfo": {
+        "title": "Handbuch der Betreuung und Pflege von Alzheimer-Patienten",
+        "authors": [
+          "Alexander Kurz"
+        ],
+        "publisher": "Georg Thieme Verlag",
+        "publishedDate": "2005-09",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "3131053925"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9783131053923"
+          }
+        ],
+        "pageCount": 137,
+        "printType": "BOOK",
+        "contentVersion": "0.0.1.0.preview.0",
+        "imageLinks": {
+          "smallThumbnail": "http://bks4.books.google.de/books?id=QxqLBj90SNkC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://bks4.books.google.de/books?id=QxqLBj90SNkC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "de",
+        "previewLink": "http://books.google.de/books?id=QxqLBj90SNkC&pg=PA2&dq=Alzheimer&hl=&cd=7&source=gbs_api",
+        "infoLink": "http://books.google.de/books?id=QxqLBj90SNkC&dq=Alzheimer&hl=&source=gbs_api",
+        "canonicalVolumeLink": "http://books.google.de/books/about/Handbuch_der_Betreuung_und_Pflege_von_Al.html?hl=&id=QxqLBj90SNkC"
+      },
+      "saleInfo": {
+        "country": "DE",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "DE",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://books.google.de/books/reader?id=QxqLBj90SNkC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+        "accessViewStatus": "SAMPLE"
+      },
+      "searchInfo": {
+        "textSnippet": "Im letzten Stadium der \u003cb\u003eAlzheimer\u003c/b\u003e-Krankheit treten körperliche Symptome wie \u003cbr\u003e  Inkontinenz, Schluckstörungen, Gehunfähigkeit, Bettlägerigkeit, Krampfanfälle \u003cbr\u003e  sowie Fehlstellungen von Gelenken auf, und die Betroffenen werden völlig \u003cb\u003e...\u003c/b\u003e"
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "LNaVMNCZmM0C",
+      "etag": "kiAFnSfo+I4",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/LNaVMNCZmM0C",
+      "volumeInfo": {
+        "title": "Zusammenhang von Ernährungsfaktoren und Alzheimer-Demenz",
+        "subtitle": "Bachelor-Thesis",
+        "authors": [
+          "Laura Zimmer"
+        ],
+        "publishedDate": "2011-10",
+        "description": "Bachelorarbeit aus dem Jahr 2011 im Fachbereich Ern hrungswissenschaft / kotrophologie, Note: 3,0, Justus-Liebig-Universit t Gie en (Institut f r Ern hrungswissenschaft), Sprache: Deutsch, Abstract: Die vorliegende Bachelorthesis befasst sich mit dem Zusammenhang zwischen verschiedenen Ern hrungsfaktoren und der Entstehung von Alzheimer Demenz (AD). Hierzu wurden Studien zur Wirkung einzelner N hrstoffe Fols ure, B-Vitamine, Fetts uren sowie gesamten Fischkonsums und gesamter Ern hrungsweisen auf das Risiko f r AD ausgewertet. Die Zahl der Erkrankten wird in den n chsten Jahrzehnten auf Grund des demographischen Wandels und der immer lter werdenden Bev lkerung stark ansteigen. Weltweit waren im Jahr 2007 ca. 29 Millionen Menschen an AD erkrankt (Freischem 2011). Prognosen der Vereinten Nationen sch tzen, dass sich die Zahl bis 2050 auf ca. 106 Millionen Menschen erh ht hat (Freischem 2011). Die Krankheit betrifft nicht nur die Patienten selbst, sondern auch Angeh rige, rzte, Pflegepersonal und die gesamte Bev lkerung. Ziel der Bachelorthesis ist es herauszufinden, ob bestimmte N hrstoffe oder eine Ern hrungsweise das Risiko f r AD mindern k nnen. Nach derzeitigem Stand des Wissens k nnen noch keine Ern hrungsempfehlungen zur Pr vention von AD gegeben werden.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "365603561X"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9783656035619"
+          }
+        ],
+        "pageCount": 60,
+        "printType": "BOOK",
+        "categories": [
+          "Technology & Engineering"
+        ],
+        "contentVersion": "0.1.0.0.preview.0",
+        "imageLinks": {
+          "smallThumbnail": "http://bks5.books.google.de/books?id=LNaVMNCZmM0C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://bks5.books.google.de/books?id=LNaVMNCZmM0C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "de",
+        "previewLink": "http://books.google.de/books?id=LNaVMNCZmM0C&printsec=frontcover&dq=Alzheimer&hl=&cd=8&source=gbs_api",
+        "infoLink": "http://books.google.de/books?id=LNaVMNCZmM0C&dq=Alzheimer&hl=&source=gbs_api",
+        "canonicalVolumeLink": "http://books.google.de/books/about/Zusammenhang_von_Ern%C3%A4hrungsfaktoren_und.html?hl=&id=LNaVMNCZmM0C"
+      },
+      "saleInfo": {
+        "country": "DE",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "DE",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://books.google.de/books/reader?id=LNaVMNCZmM0C&hl=&printsec=frontcover&output=reader&source=gbs_api",
+        "accessViewStatus": "SAMPLE"
+      },
+      "searchInfo": {
+        "textSnippet": "Bachelorarbeit aus dem Jahr 2011 im Fachbereich Ern hrungswissenschaft / kotrophologie, Note: 3,0, Justus-Liebig-Universit t Gie en (Institut f r Ern hrungswissenschaft), Sprache: Deutsch, Abstract: Die vorliegende Bachelorthesis befasst ..."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "NuSQDqI6hCMC",
+      "etag": "wHEhBeTF4Pg",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/NuSQDqI6hCMC",
+      "volumeInfo": {
+        "title": "Alzheimer-Krankheit",
+        "subtitle": "Ein neuropsychologisch-verhaltenstherapeutisches Manual. Mit Online-Materialien",
+        "authors": [
+          "Katja Werheid",
+          "Angelika Thöne-Otto"
+        ],
+        "publishedDate": "2010-09-20",
+        "description": "Die Zahl der Demenzkranken wird sich in den nächsten zehn Jahren verdoppeln. Dabei wird die Diagnose »Alzheimer-Krankheit« mittlerweile zuverlässiger und früher gestellt, sodass die Betroffenen frühzeitig von der Erkrankung erfahren. Zwar halten Medikamente die beängstigenden Symptome der Demenz einige Jahre auf, aber gerade in diesem Zeitraum ist die Lebensqualität häufig durch Depressionen eingeschränkt. Psychotherapeutische und nicht nur pharmakologische Therapie ist daher notwendig. Das vorliegende Therapiemanual mit sechs Modulen hat zum Ziel, die Alltagsfunktionen länger aufrechtzuerhalten, die Lebensqualität zu steigern und Depressivität zu mindern. Aus dem Inhalt • Erscheinungsbild und Epidemiologie • Medizinische Diagnostik und Behandlung • Psychische Störungen • Die Erkrankung im sozialen Kontext • Das Kordial-Trainingsprogramm • Module: Einführung; Der Hauskalender und andere Gedächtnishilfen; Gedächtnisprobleme im Alltag; Regelmäßige Aktivitäten; Kraftquellen in der Lebensgeschichte; Abschluss • Anhang mit Materialien: Arbeitsmappe, Angehörigenbriefe etc.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "3621277072"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9783621277075"
+          }
+        ],
+        "pageCount": 224,
+        "printType": "BOOK",
+        "categories": [
+          "Psychology"
+        ],
+        "contentVersion": "0.1.0.0.preview.0",
+        "imageLinks": {
+          "smallThumbnail": "http://bks9.books.google.de/books?id=NuSQDqI6hCMC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://bks9.books.google.de/books?id=NuSQDqI6hCMC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "de",
+        "previewLink": "http://books.google.de/books?id=NuSQDqI6hCMC&printsec=frontcover&dq=Alzheimer&hl=&cd=9&source=gbs_api",
+        "infoLink": "http://books.google.de/books?id=NuSQDqI6hCMC&dq=Alzheimer&hl=&source=gbs_api",
+        "canonicalVolumeLink": "http://books.google.de/books/about/Alzheimer_Krankheit.html?hl=&id=NuSQDqI6hCMC"
+      },
+      "saleInfo": {
+        "country": "DE",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "DE",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://books.google.de/books/reader?id=NuSQDqI6hCMC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+        "accessViewStatus": "SAMPLE"
+      },
+      "searchInfo": {
+        "textSnippet": "Die Zahl der Demenzkranken wird sich in den nächsten zehn Jahren verdoppeln."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "qSw7NDul9LQC",
+      "etag": "jk0V0Lp1BK0",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/qSw7NDul9LQC",
+      "volumeInfo": {
+        "title": "Alzheimer und andere Demenzformen",
+        "subtitle": "Antworten auf die häufigsten Fragen",
+        "authors": [
+          "Günter Krämer",
+          "Hans Förstl"
+        ],
+        "publisher": "TRIAS",
+        "publishedDate": "2008-04-23",
+        "description": "Rund eine Million sind in Deutschland an Alzheimer oder anderen Demenzformen erkrankt. Für sie und ihre Familien bringt die Krankheit einen schwerwiegenden Wandel mit sich. Diese Neuauflage ist auf dem aktuellsten Stand und informiert umfassend über Ursachen, Krankheitsverlauf und die neuesten Behandlungsmethoden. Durch den klaren Aufbau des Buches im bewährten Frage-und-Antwort-Stil finden Leser schnell und gezielt die gewünschten Informationen.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "3830437374"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9783830437376"
+          }
+        ],
+        "pageCount": 208,
+        "printType": "BOOK",
+        "categories": [
+          "Health & Fitness"
+        ],
+        "contentVersion": "0.1.0.0.preview.1",
+        "imageLinks": {
+          "smallThumbnail": "http://bks2.books.google.de/books?id=qSw7NDul9LQC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://bks2.books.google.de/books?id=qSw7NDul9LQC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "de",
+        "previewLink": "http://books.google.de/books?id=qSw7NDul9LQC&printsec=frontcover&dq=Alzheimer&hl=&cd=10&source=gbs_api",
+        "infoLink": "http://books.google.de/books?id=qSw7NDul9LQC&dq=Alzheimer&hl=&source=gbs_api",
+        "canonicalVolumeLink": "http://books.google.de/books/about/Alzheimer_und_andere_Demenzformen.html?hl=&id=qSw7NDul9LQC"
+      },
+      "saleInfo": {
+        "country": "DE",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 15.99,
+          "currencyCode": "EUR"
+        },
+        "retailPrice": {
+          "amount": 15.99,
+          "currencyCode": "EUR"
+        },
+        "buyLink": "http://books.google.de/books?id=qSw7NDul9LQC&dq=Alzheimer&hl=&buy=&source=gbs_api"
+      },
+      "accessInfo": {
+        "country": "DE",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.de/books/download/Alzheimer_und_andere_Demenzformen-sample-pdf.acsm?id=qSw7NDul9LQC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://books.google.de/books/reader?id=qSw7NDul9LQC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+        "accessViewStatus": "SAMPLE"
+      },
+      "searchInfo": {
+        "textSnippet": "Rund eine Million sind in Deutschland an Alzheimer oder anderen Demenzformen erkrankt."
+      }
+    }
+  ]
+}

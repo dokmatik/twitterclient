@@ -17,7 +17,7 @@ router.get('/', function (req, res, next) {
             access_token: req.access_token
         }
         tweetService.search(opts, function (data) {
-            res.json(data.statuses);
+            res.json(data);
         });
     }
 );

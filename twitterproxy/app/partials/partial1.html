@@ -1,0 +1,65 @@
+<div ng-contoller="SearchController">
+    <form class="form-horizontal" style="text-align:center">
+        <input id="searchInput" type="text" size="50" placeholder="Search" ng-model="searchQuery"/>
+        <button id="button" class="btn" ng-click="doSearch()">
+            <i class="icon-search"></i>Search
+        </button>
+    </form>
+    Latest searches:
+    <ul class="menu">
+        <li ng-repeat="searchElement in latestSearches|orderBy:'date':true">
+            <span ng-click="reSearch(searchElement.val)">{{searchElement.val}}</span>
+            <img src="img/onebit_33.PNG" width="16" height="16" border="0" ng-click="remove(searchElement)"/>
+        </li>
+    </ul>
+</div>
+
+<div ng-controller="BooksController" id="bookResults" style="float : left;	width:50em; background : yellow">
+    <button class="btn" ng-click="config.toggle('display')">Collapse</button>
+    <a ng-show="pageable().backwards" class="inactive" ng-click="previous()" title="No books yet">Previous results</a>
+    <a ng-show="pageable().forward" class="inactive" ng-click="next()" title="No books yet">Next results</a>
+
+    <ol id="bookResultsOrder" ng-show="config.display">
+        <li class="fullTweet" ng-repeat="volume in books.items" fadein2="250">
+            <div>
+                <img ng-src="{{volume.volumeInfo.imageLinks.thumbnail}}" alt="" height="48px" width="48px"/>
+                <a ng-href="{{volume.accessInfo.webReaderLink}}" target="_new">{{volume.volumeInfo.title}}</a>
+                {{volume.volumeInfo.subtitle}}
+                <br/>
+                <i>{{volume.volumeInfo.description}}</i>
+                <br/>
+                <span>{{volume.volumeInfo.publisher}}</span>
+            </div>
+        </li>
+    </ol>
+    <ol style="list-style:none">
+        <!-- Fill up empty spaces -->
+        <li class="fullTweet" ng-repeat="fill in fills ">
+            <h3>
+                <img alt="" height="48px" width="48px"/>
+                <span class="tweetUser">&nbsp;</span>
+            </h3>
+            <span class="tweedText ui-widget">&nbsp;</span>
+        </li>
+
+    </ol>
+</div>
+
+<div ng-controller="MyCtrl1" id="results" style="background : #eee; float:left; width:50em">
+    <button class="btn" ng-click="config.toggle('display')">Collapse</button>
+    <a id="previousTweets" class="inactive" ng-click="previousTweets()" title="No tweets yet">Previous tweets</a>
+    <a id="nextTweets" class="inactive" ng-click="nextTweets()" title="No tweets yet">Next tweets</a>
+
+    <ol id="resultsOrder" ng-show="config.display">
+        <li class="fullTweet" ng-repeat="tweet in tweets.statuses" fadein2="250">
+            <h3>
+                <img ng-src="{{tweet.user.profile_image_url}}" alt="" height="48px" width="48px"/>
+                <span class="tweetUser"><a href="http://www.twitter.com/{{tweet.from_user}}" target="new">{{tweet.user.screen_name}}</a> tweeted on {{toDate(tweet.created_at) | tweetDate:'dd.MM.yyyy HH:mm:ss'}}</span>
+            </h3>
+            <span class="tweedText ui-widget" ng-bind-html-unsafe="tweet.text | urlify"/>
+        </li>
+
+    </ol>
+</div>
+
+
